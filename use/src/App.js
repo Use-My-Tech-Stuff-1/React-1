@@ -5,6 +5,7 @@ import SignUp from './SignUp';
 import SignIn from './SignIn';
 import RenterForm from './RenterForm';
 import TechList from "./TechList";
+import PrivateRoute from './PrivateRoute'
 import './App.css';
 
 
@@ -20,17 +21,11 @@ function App() {
           </Link>
         </Navbar>
 
-        <Route exact path = '/'>
-
-          <Link to = '/sign-in' >
-              <Button>Sign In</Button>
-          </Link>
-
+        <PrivateRoute exact path = '/techlist'>
           <TechList />
+        </PrivateRoute>
 
-        </Route>
-
-        <Route path = '/sign-in'>
+        <Route path = '/'>
           <SignIn/>
         </Route>
 
@@ -38,9 +33,9 @@ function App() {
           <SignUp/>
         </Route>
 
-        <Route path = '/renter-form'>
+        <PrivateRoute path = '/renter-form'>
           <RenterForm/>
-        </Route>
+        </PrivateRoute>
 
       </header>
     </div>

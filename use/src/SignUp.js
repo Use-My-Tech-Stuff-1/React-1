@@ -96,19 +96,18 @@ const SignUp = () => {
     //placeholder api so I can see some data.
     const formSubmit = e => {
         e.preventDefault();
-        console.log('default',e)
+        console.log('default', e)
 
         axios
-        .post('https://reqres.in/api/users', formData)
+        .post('https://usemy-techstuff.herokuapp.com/api/auth/register', formData)
         .then(res => {
             setUsers(res.data);
             console.log('SET POST', res.data);
 
             setFormData({
-                name:'',
-                email:'',
-                password:'',
-                terms: true
+                name: '',
+                email: '',
+                password: ''
             });
 
             // setServerError(null);
