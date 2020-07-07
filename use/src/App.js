@@ -6,9 +6,25 @@ import SignIn from './SignIn';
 import RenterForm from './RenterForm';
 import TechList from "./TechList";
 import Product from "./Product";
-import Data from "./data"
+import Data from "./data";
+import axios from "axios";
 import './App.css';
 function App() {
+
+    // setting up state for main data
+    // const[data,setData] = useState();
+    // // setting up useEffect
+    // useEffect(()=>{
+    //     axios
+    //     .get("https://usemy-techstuff.herokuapp.com/api/product/find/available")
+    //     .then(response =>{
+    //         console.log("This is the response", response)
+    //         setData(response.data)
+    //     })
+    //     .catch(error => {
+    //         console.log("The data was not returned", error)
+    //     })
+    // }, [data])
 
   const[data,setData] = useState(Data);
 
@@ -32,7 +48,7 @@ useEffect(() => {
       
       <header className="Container">
         <div style={{display:'flex', justifyContent:'space-between'}}>
-        <input style={{color: "green", margin:'15px 0 0 15px', padding:'0 100px'}} type="text" name="search" value={searchTerm} onChange={handleChange} placeholder='Search...' />
+        {/* <input style={{color: "green", margin:'15px 0 0 8%', padding:'0 100px'}} type="text" name="search" value={searchTerm} onChange={handleChange} placeholder='Search...' /> */}
         <NavBar/>
         </div>
       

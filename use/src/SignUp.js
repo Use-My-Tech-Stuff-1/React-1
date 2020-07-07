@@ -92,7 +92,7 @@ const SignUp = () => {
         setShowPassword(showPassword ? false : true)
     }
 
-    //placeholder api so I can see some data.
+    //placeholder api
     const formSubmit = e => {
         e.preventDefault();
         console.log('default',e)

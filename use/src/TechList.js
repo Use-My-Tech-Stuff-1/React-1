@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import axios from "axios"
+
 import { Card, CardTitle, Container, CardImg, Row, Col, CardText } from 'reactstrap';
 import { Link } from 'react-router-dom'
 import './App.css';
@@ -7,26 +7,11 @@ import './App.css';
 
 const TechList = (props) => {
 
-    //setting up state
-    // const[tech,setTech] = useState({});
-    //setting up useEffect
-    // useEffect(()=>{
-    //     axios
-    //     .get("https://usemy-techstuff.herokuapp.com/api/product/find/available")
-    //     .then(response =>{
-    //         console.log("This is the response", response)
-    //         setTech(response.data)
-    //     })
-    //     .catch(error => {
-    //         console.log("The data was not returned", error)
-    //     })
-    // }, [])
     return (
         //The link to make a posting needs to make sure that the user is logged in first.
         <div>
             <Container>
             <Row>
-            {/* mapping through the data */}
             {
                 props.products.map( product => {
                     return(
